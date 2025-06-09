@@ -1,0 +1,18 @@
+10    SUM      START     0000           . Program starts at address 0000
+20    FIRST    LDX       #0             . Load 0 into X
+30             LDA       #0             . Load 0 into A
+40             +LDB      #TABLE2        . Load address of TABLE2 into B (Format 4)
+50             BASE      TABLE2         . Set base address
+60    LOOP     ADD       TABLE,X        . Add value from TABLE,X
+70             ADD       TABLE2,X       . Add value from TABLE2,X
+80             TIX       COUNT          . Increment X and compare to COUNT
+90             JLT       LOOP           . If less, jump to LOOP
+100            +STA      TOTAL          . Store result in TOTAL
+110            LITLD     A,=X'05'       . Format 4L (Phase 2)
+120            LITAD     X,=C'OK'       . Format 4L (Phase 2)
+130            RSUB                     . Return
+140   COUNT    RESW      1              . Reserve word for COUNT
+150   TABLE    RESW      2000           
+160   TABLE2   RESW      2000           
+170   TOTAL    RESW      1              . Store total here
+180            END       FIRST          . End of program
