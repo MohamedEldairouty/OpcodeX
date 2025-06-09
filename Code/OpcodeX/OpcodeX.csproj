@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Properties\LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\LOGO.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SICXEAssembler\SICXEAssembler.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="HTME.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Out_Pass2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pass2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SymbolTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Out_Pass1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Pass1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Intermediate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InputEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Input\in.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\HTME.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\intermediate.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\out_pass1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\out_pass2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\symbTable.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

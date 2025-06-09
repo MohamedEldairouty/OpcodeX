@@ -1,0 +1,16 @@
+# Ignore build & publish outputs
+**/bin/
+**/obj/
+**/Release/
+**/Debug/
+
+# VS/Windows junk
+.vs/
+*.user
+*.suo
+*.DS_Store
+Thumbs.db
+
+# Ignore published .exe unless in App/
+*.exe
+!App/**/*.exe
